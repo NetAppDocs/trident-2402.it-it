@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: trident-get-started/kubernetes-deploy.html 
-keywords: deploy, astra trident, methods, operator, tridentctl, helm, tanzu, vmware 
+keywords: deploy, astra trident, methods, operator, tridentctl, helm, tanzu, vmware, netapp console 
 summary: 'Puoi installare Astra Trident usando l"operatore Trident (manualmente o usando Helm) o con `tridentctl`. In questo argomento vengono fornite informazioni importanti per la scelta del processo di installazione appropriato.' 
 ---
 = Scopri di più sull'installazione di Astra Trident
@@ -115,10 +115,10 @@ Quando la versione di Kubernetes del cluster viene aggiornata a una versione sup
 NOTE: Se il cluster viene aggiornato a una versione non supportata, l'operatore impedisce l'installazione di Astra Trident. Se Astra Trident è già stato installato con l'operatore, viene visualizzato un avviso per indicare che Astra Trident è installato su una versione di Kubernetes non supportata.
 
 ====
-.<strong> consente di gestire i cluster utilizzando BlueXP (in precedenza Cloud Manager) </strong>
+.<strong>Gestione del cluster Kubernetes tramite NetApp Console</strong>
 [%collapsible]
 ====
-Con link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/concept-kubernetes.html["Astra Trident con BlueXP"^], È possibile eseguire l'aggiornamento alla versione più recente di Astra Trident, aggiungere e gestire classi di storage e connetterle agli ambienti di lavoro, nonché eseguire il backup di volumi persistenti utilizzando Cloud Backup Service. BlueXP supporta l'implementazione di Astra Trident utilizzando l'operatore Trident, manualmente o utilizzando Helm.
+Con Astra Trident tramite NetApp Console, puoi eseguire l'aggiornamento all'ultima versione di Astra Trident, aggiungere e gestire classi di archiviazione e connetterle agli ambienti di lavoro, nonché eseguire il backup di volumi persistenti utilizzando Cloud Backup Service.  La console supporta la distribuzione Astra Trident tramite l'operatore Trident , manualmente o tramite Helm.
 
 ====
 
