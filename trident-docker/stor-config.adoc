@@ -284,7 +284,7 @@ Scegliere `ontap-nas-flexgroup` il driver per aumentare il parallelismo a un sin
 * La clonazione non è supportata per i volumi FlexGroup.
 
 
-Per informazioni su FlexGroups e workload appropriati per FlexGroups, vedere https://www.netapp.com/pdf.html?item=/media/12385-tr4571pdf.pdf["Guida all'implementazione e alle Best practice per i volumi NetApp FlexGroup"^].
+Per informazioni su FlexGroups e sui carichi di lavoro adatti a FlexGroups vedi il  https://www.netapp.com/pdf.html?item=/media/12385-tr4571.pdf["Guida all'implementazione e alle Best practice per i volumi NetApp FlexGroup"^].
 
 Per ottenere funzionalità avanzate e scalabilità enorme nello stesso ambiente, è possibile eseguire più istanze del Docker Volume Plugin, con una sola applicazione `ontap-nas` e un altro utilizzo `ontap-nas-economy`.
 

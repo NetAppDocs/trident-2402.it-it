@@ -115,7 +115,7 @@ Yesfootnote:2[]: Supportato per i volumi raw-block
 
 === Driver backend Azure NetApp Files
 
-Astra Trident utilizza `azure-netapp-files` driver per la gestione di link:https://azure.microsoft.com/en-us/services/netapp/["Azure NetApp Files"^] servizio.
+Astra Trident usa il  `azure-netapp-files` driver per gestire il link:https://azure.microsoft.com/en-us/products/netapp/["Azure NetApp Files"^] service.
 
 Per ulteriori informazioni su questo driver e su come configurarlo, consultare link:https://docs.netapp.com/us-en/trident/trident-use/anf.html["Configurazione backend Astra Trident per Azure NetApp Files"^].
 
