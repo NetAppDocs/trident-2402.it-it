@@ -16,6 +16,7 @@ Scopri le opzioni di configurazione back-end per Amazon FSX per ONTAP. Questa se
 
 
 
+[[backend-configuration-options]]
 == Opzioni di configurazione back-end
 
 Per le opzioni di configurazione del backend, consultare la tabella seguente:
@@ -155,6 +156,7 @@ Fare riferimento a. link:https://docs.aws.amazon.com/secretsmanager/latest/userg
 |===
 
 
+[[update-datalif-after-initial-configuration]]
 === Aggiornare `dataLIF` dopo la configurazione iniziale
 
 È possibile modificare la LIF dei dati dopo la configurazione iniziale eseguendo il seguente comando per fornire al nuovo file JSON di back-end i dati aggiornati LIF.
@@ -168,6 +170,7 @@ NOTE: Se i PVC sono collegati a uno o più pod, è necessario abbassare tutti i 
 
 
 
+[[backend-configuration-options-for-provisioning-volumes]]
 == Opzioni di configurazione back-end per il provisioning dei volumi
 
 È possibile controllare il provisioning predefinito utilizzando queste opzioni in `defaults` della configurazione. Per un esempio, vedere gli esempi di configurazione riportati di seguito.
@@ -211,9 +214,7 @@ Se NAE è attivato sul backend, tutti i volumi forniti in Astra Trident saranno 
 Per ulteriori informazioni, fare riferimento a: link:../trident-reco/security-reco.html["Come funziona Astra Trident con NVE e NAE"]. | `false` 
 
 
-| `luksEncryption` | Attivare la crittografia LUKS. Fare riferimento a. link:../trident-reco/security-reco.html#Use-Linux-Unified-Key-Setup-(LUKS)["Utilizzo di Linux Unified Key Setup (LUKS)"].
-
-Solo SAN. | "" 
+| `luksEncryption` | Abilita la crittografia LUKS. Consulta link:../trident-reco/security-luks.html["Utilizzo di Linux Unified Key Setup (LUKS)"]. Solo SAN. | "" 
 
 
 | `tieringPolicy` | Policy di tiering da utilizzare	`none` | `snapshot-only` Per la configurazione SVM-DR precedente a ONTAP 9.5 
@@ -234,6 +235,7 @@ Il valore predefinito di SMB è `ntfs`.
 |===
 
 
+[[example-configurations]]
 == Configurazioni di esempio
 
 .Configurazione della classe di storage per volumi SMB

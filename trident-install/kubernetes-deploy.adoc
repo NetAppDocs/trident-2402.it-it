@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: trident-get-started/kubernetes-deploy.html 
+permalink: trident-install/kubernetes-deploy.html 
 keywords: deploy, astra trident, methods, operator, tridentctl, helm, tanzu, vmware, netapp console 
 summary: 'Puoi installare Astra Trident usando l"operatore Trident (manualmente o usando Helm) o con `tridentctl`. In questo argomento vengono fornite informazioni importanti per la scelta del processo di installazione appropriato.' 
 ---
@@ -16,6 +16,7 @@ Per garantire che Astra Trident possa essere installato in una vasta gamma di am
 
 
 
+[[critical-information-about-astra-trident-24-02]]
 == Informazioni critiche su Astra Trident 24,02
 
 *È necessario leggere le seguenti informazioni critiche su Astra Trident.*
@@ -33,11 +34,12 @@ Utilizzo di configurazioni o utilizzo non multipathing di `find_multipaths: yes`
 ====
 
 
+[[before-you-begin]]
 == Prima di iniziare
 
 Indipendentemente dal percorso di installazione, è necessario disporre di:
 
-* Privilegi completi per un cluster Kubernetes supportato che esegue una versione supportata di Kubernetes e requisiti di funzionalità attivati. Esaminare link:requirements.html["requisiti"] per ulteriori informazioni.
+* Privilegi completi per un cluster Kubernetes supportato che esegue una versione supportata di Kubernetes e con i requisiti delle funzionalità abilitati. Consultare link:../trident-get-started/requirements.html["requisiti"] per i dettagli.
 * Accesso a un sistema storage NetApp supportato.
 * Possibilità di montare volumi da tutti i nodi di lavoro Kubernetes.
 * Un host Linux con `kubectl` (o. `oc`, Se si utilizza OpenShift) installato e configurato per gestire il cluster Kubernetes che si desidera utilizzare.
@@ -46,19 +48,21 @@ Indipendentemente dal percorso di installazione, è necessario disporre di:
 
 
 
-TIP: Se non si è ancora familiarizzato con il link:../trident-concepts/intro.html["concetti di base"^], è il momento ideale per farlo.
+TIP: Se non hai familiarità con il link:../trident-get-started/intro.html["concetti di base"^], questo è il momento giusto per farlo.
 
 
 
+[[choose-your-installation-method]]
 == Scegliere il metodo di installazione desiderato
 
-Seleziona il metodo di installazione più adatto alle tue esigenze. È inoltre necessario esaminare le considerazioni per link:kubernetes-deploy.html#move-between-installation-methods["passaggio da un metodo all'altro"] prima di prendere la decisione.
+Seleziona il metodo di installazione più adatto alle tue esigenze. Dovresti anche esaminare le considerazioni per link:kubernetes-deploy.html#moving-between-installation-methods["passaggio da un metodo all'altro"] prima di prendere una decisione.
 
 
 
+[[using-the-trident-operator]]
 === Utilizzando l'operatore Trident
 
-Sia che si tratti di implementare manualmente o utilizzare Helm, l'operatore Trident è un ottimo modo per semplificare l'installazione e gestire dinamicamente le risorse di Astra Trident. Puoi anche farlo link:../trident-get-started/kubernetes-customize-deploy.html["Personalizzare l'implementazione dell'operatore Trident"] utilizzando gli attributi in `TridentOrchestrator` Risorsa personalizzata (CR).
+Che tu faccia il deployment manualmente o usando Helm, l'operatore Trident è un ottimo modo per semplificare l'installazione e gestire dinamicamente le risorse Astra Trident. Puoi persino link:kubernetes-customize-deploy.html["Personalizzare l'implementazione dell'operatore Trident"] usando gli attributi nella  `TridentOrchestrator` custom resource (CR).
 
 I vantaggi derivanti dall'utilizzo dell'operatore Trident includono:
 
@@ -123,6 +127,7 @@ Con Astra Trident tramite NetApp Console, puoi eseguire l'aggiornamento all'ulti
 ====
 
 
+[[using-tridentctl]]
 === Utilizzo di `tridentctl`
 
 Se si dispone di un'implementazione esistente che deve essere aggiornata o se si desidera personalizzare in modo efficace l'implementazione, è necessario prendere in considerazione . Questo è il metodo convenzionale per implementare Astra Trident.
@@ -135,6 +140,7 @@ NOTE: A partire dalla versione 22.04, le chiavi AES non verranno più rigenerate
 
 
 
+[[choose-your-installation-mode]]
 == Scegliere la modalità di installazione
 
 Determinare il processo di implementazione in base alla _modalità di installazione_ (Standard, Offline o Remote) richiesta dall'organizzazione.
@@ -174,6 +180,7 @@ Di seguito viene riportata una panoramica generale del processo di installazione
 ====
 
 
+[[select-the-process-based-on-your-method-and-mode]]
 == Selezionare il processo in base al metodo e alla modalità
 
 Dopo aver preso le decisioni, selezionare il processo appropriato.
@@ -203,6 +210,7 @@ link:kubernetes-deploy-tridentctl.html["Installazione standard o offline"]
 |===
 
 
+[[moving-between-installation-methods]]
 == Passaggio da un metodo di installazione all'altro
 
 È possibile modificare il metodo di installazione. Prima di procedere, considerare quanto segue:
@@ -214,6 +222,7 @@ link:kubernetes-deploy-tridentctl.html["Installazione standard o offline"]
 
 
 
+[[other-known-configuration-options]]
 == Altre opzioni di configurazione note
 
 Quando si installa Astra Trident sui prodotti del portfolio VMware Tanzu:

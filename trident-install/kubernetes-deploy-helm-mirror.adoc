@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: trident-get-started/kubernetes-deploy-helm-mirror.html 
+permalink: trident-install/kubernetes-deploy-helm-mirror.html 
 keywords: deploy, astra trident, operator, helm, helm chart, configuration, values, offline, air gap, gap, registry 
 summary: 'È possibile implementare l"operatore Trident e installare Astra Trident utilizzando Helm. Questo processo si applica alle installazioni in cui le immagini container richieste da Astra Trident sono memorizzate in un registro privato.' 
 ---
@@ -16,6 +16,7 @@ summary: 'È possibile implementare l"operatore Trident e installare Astra Tride
 
 
 
+[[critical-information-about-astra-trident-24-02]]
 == Informazioni critiche su Astra Trident 24,02
 
 *È necessario leggere le seguenti informazioni critiche su Astra Trident.*
@@ -33,14 +34,15 @@ Utilizzo di configurazioni o utilizzo non multipathing di `find_multipaths: yes`
 ====
 
 
+[[deploy-the-trident-operator-and-install-astra-trident-using-helm]]
 == Implementare l'operatore Trident e installare Astra Trident utilizzando Helm
 
 Utilizzo di Trident link:https://artifacthub.io/packages/helm/netapp-trident/trident-operator["Grafico di comando"^] È possibile implementare l'operatore Trident e installare Trident in un'unica fase.
 
-Revisione link:../trident-get-started/kubernetes-deploy.html["panoramica dell'installazione"] per assicurarsi di aver soddisfatto i prerequisiti di installazione e selezionato l'opzione di installazione corretta per il proprio ambiente.
+Verificate link:kubernetes-deploy.html["panoramica dell'installazione"] per assicurarvi di aver soddisfatto i prerequisiti di installazione e di aver selezionato l'opzione di installazione corretta per il vostro ambiente.
 
 .Prima di iniziare
-Oltre a link:../trident-get-started/kubernetes-deploy.html#before-you-deploy["prerequisiti per l'implementazione"] di cui hai bisogno link:https://v3.helm.sh/["Helm versione 3"^].
+Oltre al link:kubernetes-deploy.html#before-you-begin["prerequisiti per l'implementazione"] è necessario link:https://v3.helm.sh/["Helm versione 3"^].
 
 .Fasi
 . Aggiungere il repository Astra Trident Helm:
@@ -80,6 +82,7 @@ NOTE: Se è già stato creato uno spazio dei nomi per Trident, il `--create-name
 
 
 
+[[pass-configuration-data-during-install]]
 == Passare i dati di configurazione durante l'installazione
 
 Esistono due modi per passare i dati di configurazione durante l'installazione:
@@ -106,6 +109,7 @@ helm install <name> netapp-trident/trident-operator --version 100.2402.0  --crea
 ----
 
 
+[[configuration-options]]
 == Opzioni di configurazione
 
 Questa tabella e il `values.yaml` Il file, che fa parte del grafico Helm, fornisce l'elenco delle chiavi e i relativi valori predefiniti.
